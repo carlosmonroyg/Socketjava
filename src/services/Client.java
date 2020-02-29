@@ -12,22 +12,22 @@ public class Client extends Connection
 		super("Client");
 		
 	}
-	public void onClient() {
-		System.out.println("cient running...");
+	public void onClient(String Client) {
+		System.out.println(Client+ "running...");
 		try {
 		outputServer = new DataOutputStream(s.getOutputStream());
-		System.out.println("cient> sending data to server...");
+		System.out.println(Client+ "> sending data to server...");
 		for(int i =0; i < 2; i++)
 		{
 			
-			outputServer.writeUTF("Este es el mansage del cliente carlos numero " + (i+1) + "\n");
+			outputServer.writeUTF(Client +">Mensaje numero "+(i+1) + "\n");
 		}
-		System.out.println("cient> data sent...");
+		System.out.println(Client+ "> data sent...");
 		
 		//outputServer.writeUTF("Este es un mensaje para el servidor del cliente carlos ");
 		outputServer.flush();
 		s.close();
-		System.out.println("cient> Stop...");
+		System.out.println(Client+  ">Stop...");
 	}catch (Exception e) {
 		System.out.println(e.getMessage());
 	}

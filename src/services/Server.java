@@ -33,7 +33,7 @@ public class Server extends Connection {
 			System.out.println("cliente offline...");
 			//crear un while para que atienda mas de un cliente 
 			//todos los clientes se atienden al timpo tienen que tener holos en la clase server 
-			ss.close();
+			//ss.close();
 			System.out.println("server stop....");
 			
 		} catch (IOException e) {
