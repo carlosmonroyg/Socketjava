@@ -1,8 +1,9 @@
 package services;
 
 import java.io.DataOutputStream;
-
 import java.io.IOException;
+
+
 
 
 public class Client extends Connection
@@ -25,7 +26,7 @@ public class Client extends Connection
 		System.out.println(Client+ "> data sent...");
 		
 		//outputServer.writeUTF("Este es un mensaje para el servidor del cliente carlos ");
-		outputServer.flush();
+		//outputServer.flush();
 		s.close();
 		System.out.println(Client+  ">Stop...");
 	}catch (Exception e) {
