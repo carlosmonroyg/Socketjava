@@ -14,21 +14,24 @@ public class ServerTheread extends Thread {
 	
 	
 
-	public ServerTheread (Socket s , int idCient) {
+	public ServerTheread (Socket s , int idCient, int idClient) {
 		
 		this.s = s;
 		this.idClient = idClient;
 		
 	}
+
 	public void run() {
 		try { 
-			while (true) {
+			
 				
 				BufferedReader input = new BufferedReader(new InputStreamReader(s.getInputStream()));
 				int suma = 0;
 				if(idClient == 3) {
 					for (int i=0; i<1000000000; i++) {
-				}
+				    suma ++;
+					}
+					
 				}
 			
 				while((message = input.readLine()) != null ) {
@@ -46,7 +49,7 @@ public class ServerTheread extends Thread {
 			}
 		
 	
-		
 	
+	}
 	
 

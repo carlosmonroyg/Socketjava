@@ -16,7 +16,7 @@ public class MaiinServerThread {
     	   
     	   Socket s = new Socket();
     	   s = ss. accept();
-    	   ServerTheread serverTheread = new  ServerTheread( s, idClient);
+    	   ServerTheread serverTheread = new  ServerTheread( s, idClient, idClient);
     	   serverTheread.start();
     	   idClient ++ ;
     	   
